@@ -43,14 +43,8 @@ syntax on">.vimrc
 # VLC 동영상 뷰어
 sudo snap install vlc
 
+#Chrome
+sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-#docker 관련
-touch ~/.bash_aliases
-echo "alias dockermi='docker rmi $(docker images -aq)'
-alias dockerm='docker rm -f $(docker ps -aq)'
-alias dockermall='dockerm; dockermi; docker network prune;'
-alias dockerl='echo -e ${GREEN}DOCKER IMAGES${NC};
-                docker images;
-                echo -e ${GREEN}DOCKER PS${NC};
-                docker ps'">.bash_aliases
-source .bash_aliases
