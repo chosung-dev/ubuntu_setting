@@ -1,5 +1,8 @@
 #!/bin/bash
 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 echo "chosung linux setting start"
 
 #사이드바 하단으로
@@ -39,3 +42,15 @@ syntax on">.vimrc
 
 # VLC 동영상 뷰어
 sudo snap install vlc
+
+
+#docker 관련
+touch ~/.bash_aliases
+echo "alias dockermi='docker rmi $(docker images -aq)'
+alias dockerm='docker rm -f $(docker ps -aq)'
+alias dockermall='dockerm; dockermi; docker network prune;'
+alias dockerl='echo -e ${GREEN}DOCKER IMAGES${NC};
+                docker images;
+                echo -e ${GREEN}DOCKER PS${NC};
+                docker ps'">.bash_aliases
+source .bash_aliases
