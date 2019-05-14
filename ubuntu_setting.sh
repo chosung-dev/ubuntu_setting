@@ -4,20 +4,24 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 echo "chosung linux setting start"
+sudo apt-get update
 
+#Systme Setting
 #사이드바 하단으로
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+#화면보호기 끄기
+xset s off
+xset -dpms
+
 
 #aliase setting
 touch ~/.bash_aliases
 echo "alias l='ls -l'">.bash_aliases
 source .bash_aliases
 
-#프로그램 설치
-sudo apt-get update
-
 #VIM
-sudo apt-get install vim
+echo Y|sudo apt-get install vim
 touch ~/.vimrc
 echo "set ai
 set si
@@ -41,16 +45,10 @@ set wmnu
 syntax on">.vimrc
 
 # VLC 동영상 뷰어
-sudo snap install vlc
+echo Y|sudo snap install vlc
 
-
-#docker 관련
-touch ~/.bash_aliases
-echo "alias dockermi='docker rmi $(docker images -aq)'
-alias dockerm='docker rm -f $(docker ps -aq)'
-alias dockermall='dockerm; dockermi; docker network prune;'
-alias dockerl='echo -e ${GREEN}DOCKER IMAGES${NC};
-                docker images;
-                echo -e ${GREEN}DOCKER PS${NC};
-                docker ps'">.bash_aliases
-source .bash_aliases
+#Chrome
+echo Y|sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm google-chrome-*
