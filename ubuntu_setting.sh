@@ -3,10 +3,6 @@
 echo "chosung linux setting start"
 sudo apt-get update
 
-#ssh 설정
-echo Y|sudo apt-get install openssh-server
-
-
 #Systme Setting
 #사이드바 하단으로
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
@@ -58,5 +54,8 @@ rm google-chrome-*
 
 #program
 sudo apt-get install tree
+
+#ssh
+echo Y|sudo apt-get install openssh-server
 
 source ~/.bash_aliases
