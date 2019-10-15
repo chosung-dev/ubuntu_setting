@@ -10,6 +10,7 @@ echo Y|sudo apt-get install openssh-server
 #Systme Setting
 #사이드바 하단으로
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position Bottom
 
 #화면보호기 끄기
 xset s off
