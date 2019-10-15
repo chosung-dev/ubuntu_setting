@@ -4,7 +4,7 @@ echo "chosung linux setting start"
 sudo apt-get update
 
 #ssh 설정
-sudo apt-get install openssh-server
+echo Y|sudo apt-get install openssh-server
 
 
 #Systme Setting
