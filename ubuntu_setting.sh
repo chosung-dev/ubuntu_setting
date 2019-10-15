@@ -3,6 +3,10 @@
 echo "chosung linux setting start"
 sudo apt-get update
 
+#ssh 설정
+sudo apt-get install openssh-server
+
+
 #Systme Setting
 #사이드바 하단으로
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
