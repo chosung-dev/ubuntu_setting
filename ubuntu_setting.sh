@@ -58,6 +58,8 @@ sudo apt-get install tree
 #ssh
 echo Y|sudo apt-get install openssh-server
 
+sudo apt install net-tools
+
 #방화벽 끄기
 sudo ufw disable
 
