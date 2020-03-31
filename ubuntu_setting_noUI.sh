@@ -10,7 +10,8 @@ touch ~/.bash_aliases
 echo "#!/bin/bash">~/.bash_aliases
 echo "GREEN='\033[0;32m'">>~/.bash_aliases
 echo "NC='\033[0m'">>~/.bash_aliases
-echo "alias l='ls -l'">>~/.bash_aliases
+echo "alias l='ls'">>~/.bash_aliases
+echo "alias ll='ls -l'">>~/.bash_aliases
 
 #VIM
 echo Y|sudo apt-get install vim
