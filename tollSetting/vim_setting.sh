@@ -36,4 +36,6 @@ noremap D $
 map <F2> :wq!<CR>
 map <F5> :set nu<CR>
 map <F6> :set nu!<CR>
-noremap k dd">~/.vimrc
+noremap k d
+noremap <C-i> I">~/.vimrc
+
