@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "chosung linux setting start"
+echo "Chosung linux setting start"
 sudo apt-get update
 #Systme Setting
 
@@ -18,7 +18,13 @@ sudo apt-get install tree
 #ssh
 echo Y|sudo apt-get install openssh-server
 
+#ifconfig
+echo Y|sudo apt-get install net-tools
+
 #방화벽 끄기
 sudo ufw disable
+
+./tollSetting/docker_setting.sh
+./tollSetting/vim_setting.sh
 
 source ~/.bash_aliases

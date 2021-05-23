@@ -12,18 +12,11 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 xset s off
 xset -dpms
 
-# VLC 동영상 뷰어
-echo Y|sudo snap install vlc
-
-#Chrome
-echo Y|sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-rm google-chrome-*
-
 ./ubuntu_setting_noUI.sh
 
-./tollSetting/docker_setting.sh
-./tollSetting/vim_setting.sh
+./tollSetting/terminator_setting.sh
 
 source ~/.bash_aliases
+
+echo "테마 설정은 다음 사이트 확인"
+echo "https://geundung.dev/89"
