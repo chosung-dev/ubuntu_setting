@@ -1,4 +1,9 @@
 #!/bin/bash
+
+#docker install
+sudo snap install docker
+sudo chmod 666 /var/run/docker.sock
+
 #docker 관련
 echo "alias dockermi='docker rmi -f \$(docker images -aq)'
 alias dockerm='docker rm -f \$(docker ps -aq)'
