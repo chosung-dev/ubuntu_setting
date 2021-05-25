@@ -21,6 +21,9 @@ echo Y|sudo apt-get install openssh-server
 #ifconfig
 echo Y|sudo apt-get install net-tools
 
+#curl
+sudo snap install curl
+
 #방화벽 끄기
 sudo ufw disable
 
