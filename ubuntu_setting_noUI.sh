@@ -29,5 +29,6 @@ sudo ufw disable
 
 ./tollSetting/docker_setting.sh
 ./tollSetting/vim_setting.sh
+./tollSetting/git_setting.sh
 
 source ~/.bash_aliases
