@@ -2,7 +2,7 @@
 
 #git 관련
 echo "alias gp='git pull'
-alias gb='git branch'
+alias gb='git branch --show-current'
 ">>~/.bash_aliases
 
 source ~/.bash_aliases
